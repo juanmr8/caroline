@@ -1,7 +1,45 @@
-@import "variables";
 @import "global";
-@import "homepage";
+@font-face {
+    font-family: Bandeins;
+    src: url(fonts/bandeins-strange-variable.ttf)
+}
 
-//Font Awesome
-@import "../../plugins/font-awesome/scss/fontawesome.scss";
-@import "../../plugins/font-awesome/scss/solid.scss";
+body {
+    color: #ffffff;
+    margin: 50vh 40px 40px 40px;
+    background-color: #000000;
+    line-height: 1.5;
+    font-size: 60px;
+    font-family: Bandeins;
+}
+
+h1 {
+    position:fixed;
+    top: 80px;
+    left:80px;
+    z-index: 1;
+    font-variation-settings: "wght" 100, "wdth" 100;
+}
+nav {
+    position:fixed;
+    top:80px;
+    right:80px;
+    z-index: 1;
+    & a {
+        color:#fff;
+        text-decoration: none;
+        margin: 0 0 0 30px;
+        font-variation-settings: "wght" 100, "wdth" 100;
+        transition: font-variation-settings .2s ease-in-out;
+    }
+    & a:hover {
+        font-variation-settings: "wght" 900, "wdth" 300;
+    }
+}
+img {
+    width:100%;
+    height: calc(100vh - 80px); 
+    object-fit:cover;   
+    position: sticky;
+    top: 40px;
+}
